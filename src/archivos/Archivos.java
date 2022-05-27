@@ -105,13 +105,12 @@ class archivo
     
     void leer(String pNombre, lista lis) throws IOException
     {
-        fr=new FileReader("estudiante.txt");
+        fr=new FileReader(pNombre);
         BufferedReader br=new BufferedReader(fr);
         String linea;
         while ((linea=br.readLine())!=null)
         {
-            String[] datos=new String[4];
-            datos=linea.split("//");
+            String[] datos = linea.split("//");
             String cedula = datos[0];
             String nombre = datos[1];
             String materia = datos[2];
